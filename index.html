@@ -1,0 +1,273 @@
+<div id="app">
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="brand">
+        <span class="brand-mark">RUSHER</span>
+        <span class="brand-sub">ID</span>
+      </div>
+      <div class="search-bar">
+        <input id="global-search" type="text" placeholder="Cari game favorit..." aria-label="Cari game" />
+        <button id="global-search-btn" class="search-button" type="button">Cari</button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Ganti tema">🌙</button>
+        <button id="cart-button" class="icon-button cart-button" type="button" aria-label="Keranjang">
+          🛒
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+        <button id="auth-button" class="primary-button" type="button">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section id="home-page" class="page active">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Top Up Game Digital</p>
+          <h1>Top Up game favoritmu<br/>dengan cepat & aman</h1>
+          <p>Rusher ID membantu kamu membeli produk digital game dengan proses yang ringkas dan aman.</p>
+          <div class="hero-actions">
+            <button id="hero-shop" class="primary-button" type="button">Belanja Sekarang</button>
+            <button id="hero-catalog" class="secondary-button" type="button">Lihat Katalog</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="floating-card card-one">
+            <span>Popular</span>
+            <strong>Mobile Legends</strong>
+            <small>Diamond 5.600</small>
+          </div>
+          <div class="floating-card card-two">
+            <span>Promo</span>
+            <strong>Game Top Up</strong>
+            <small>Diskon 15%</small>
+          </div>
+        </div>
+      </div>
+
+      <div id="promo-banner" class="promo-banner"></div>
+
+      <div class="section-header">
+        <h2>Kategori Game</h2>
+      </div>
+      <div id="category-list" class="category-grid"></div>
+
+      <div class="section-header">
+        <h2>Game Populer</h2>
+      </div>
+      <div id="popular-games" class="product-grid compact"></div>
+
+      <div class="section-header">
+        <h2>Produk Rekomendasi</h2>
+      </div>
+      <div id="recommended-products" class="product-grid"></div>
+
+      <div class="section-header">
+        <h2>Mengapa memilih Rusher ID?</h2>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Cepat</h3>
+          <p>Proses top-up instan dan mudah dimengerti.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3>Aman</h3>
+          <p>Proses aman dengan validasi input dan label demo yang jelas.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon">💸</div>
+          <h3>Harga Transparan</h3>
+          <p>Harga terlihat jelas untuk tiap produk.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon">📦</div>
+          <h3>Produk Lengkap</h3>
+          <p>Berbagai game dengan katalog yang bisa berkembang.</p>
+        </article>
+      </div>
+
+      <div class="section-header">
+        <h2>Cara Top Up</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">1</span>
+          <h3>Pilih Game</h3>
+          <p>Pilih game favoritmu dari katalog.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">2</span>
+          <h3>Masukkan ID</h3>
+          <p>Isi ID pemain atau zone sesuai ketentuan game.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">3</span>
+          <h3>Pilih Nominal</h3>
+          <p>Pilih item yang paling sesuai kebutuhan.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">4</span>
+          <h3>Checkout</h3>
+          <p>Lanjutkan ke checkout dan simulasikan pembayaran.</p>
+        </article>
+      </div>
+
+      <div class="section-header">
+        <h2>FAQ</h2>
+      </div>
+      <div id="home-faq" class="faq-list"></div>
+    </section>
+
+    <section id="catalog-page" class="page">
+      <div class="catalog-shell">
+        <aside class="catalog-sidebar">
+          <h2>Filter</h2>
+          <div class="field-group">
+            <label for="catalog-category">Kategori</label>
+            <select id="catalog-category">
+              <option value="">Semua Kategori</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="catalog-sort">Urutkan</label>
+            <select id="catalog-sort">
+              <option value="popular">Populer</option>
+              <option value="name-asc">Nama A-Z</option>
+              <option value="name-desc">Nama Z-A</option>
+              <option value="price-asc">Harga Terendah</option>
+              <option value="price-desc">Harga Tertinggi</option>
+            </select>
+          </div>
+          <button id="reset-filters" class="secondary-button full-width" type="button">Reset Filter</button>
+        </aside>
+        <div class="catalog-main">
+          <div class="catalog-toolbar">
+            <h2>Katalog Game</h2>
+            <input id="catalog-search" type="text" placeholder="Cari game..." />
+          </div>
+          <div id="catalog-grid" class="product-grid"></div>
+          <div id="catalog-empty" class="empty-state hidden">
+            <p>Tidak ada game yang cocok dengan pencarian dan filter saat ini.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="game-detail-page" class="page">
+      <div id="game-detail-content" class="detail-container"></div>
+    </section>
+
+    <section id="cart-page" class="page">
+      <div class="page-header">
+        <h2>Keranjang Belanja</h2>
+      </div>
+      <div id="cart-content" class="cart-layout"></div>
+    </section>
+
+    <section id="checkout-page" class="page">
+      <div class="page-header">
+        <h2>Checkout</h2>
+      </div>
+      <div id="checkout-content" class="checkout-layout"></div>
+    </section>
+
+    <section id="order-page" class="page">
+      <div class="page-header">
+        <h2>Status Pesanan</h2>
+      </div>
+      <div id="order-content" class="order-layout"></div>
+    </section>
+
+    <section id="dashboard-page" class="page">
+      <div class="page-header">
+        <h2>Dashboard Pengguna</h2>
+      </div>
+      <div id="dashboard-content" class="dashboard-layout"></div>
+    </section>
+
+    <section id="profile-page" class="page">
+      <div class="page-header">
+        <h2>Profil Saya</h2>
+      </div>
+      <div id="profile-content" class="profile-layout"></div>
+    </section>
+
+    <section id="admin-page" class="page">
+      <div class="page-header">
+        <h2>Dashboard Admin</h2>
+      </div>
+      <div id="admin-content" class="admin-layout"></div>
+    </section>
+
+    <section id="help-page" class="page">
+      <div class="page-header">
+        <h2>Bantuan & FAQ</h2>
+      </div>
+      <div id="help-content" class="help-layout"></div>
+    </section>
+
+    <section id="about-page" class="page">
+      <div class="page-header">
+        <h2>Tentang Rusher ID</h2>
+      </div>
+      <div id="about-content" class="about-layout"></div>
+    </section>
+
+    <section id="login-page" class="page">
+      <div class="auth-panel">
+        <div id="auth-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Rusher ID</h3>
+        <p>Platform top-up game digital modern yang fokus pada kemudahan, keamanan, dan kenyamanan pengguna.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Bantuan</h4>
+        <ul>
+          <li><button type="button" class="footer-link" data-route="help">FAQ</button></li>
+          <li><button type="button" class="footer-link" data-route="help">Panduan Top Up</button></li>
+          <li><button type="button" class="footer-link" data-route="about">Tentang Kami</button></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kebijakan</h4>
+        <ul>
+          <li><button type="button" class="footer-link" data-route="help">Kebijakan Privasi</button></li>
+          <li><button type="button" class="footer-link" data-route="help">Syarat Layanan</button></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul>
+          <li>support@rusherid.demo</li>
+          <li>Jam: 24/7 Demo</li>
+          <li><span class="demo-tag">Demo Mode</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Rusher ID. All rights reserved. <span class="demo-tag">Demo Version</span></p>
+    </div>
+  </footer>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="data/demo-data.js"></script>
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/orders.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/app.js"></script>
